@@ -1,0 +1,313 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+.container{
+    height: 100%;
+    width: 100%;
+
+}
+
+.top-head{
+    height: 20%;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.order-history-box{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 10px;
+    background-color: white;
+}
+
+.order-image{
+    height: 100%;
+    width: 16%;
+}
+
+.order-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.order-detail-box{
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: 75%;
+    margin: 10 50px;
+    background-color: whitesmoke
+    
+}
+.order_id-name-date-payment-id-quantity{
+    display: flex;
+    
+    height: 80%;
+    width: 80%;
+    
+}
+
+.book_name,.date,.quantity{
+    margin: auto;;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    width: 20%;
+}
+
+.order-id{
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    width: 8%;
+
+}
+.payment_id{
+    margin: auto;;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    width: 25%;
+
+}
+
+.cancel_order{
+    height: 80%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.cancel_order button{
+    height: 45px;
+    width: 120px;
+    margin: 0 10px;
+    border: 0.2px solid #ccc;
+    border-radius: 5px;
+}
+
+.cancel_order button:hover{
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.cancel_order2{
+    height: 80%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.cancel_order2 button{
+    height: 45px;
+    width: 120px;
+    margin: 0 10px;
+    border: 0.2px solid #ccc;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 20%;
+    background-color: aliceblue;
+    margin: 10 44px;
+}
+.hiuserBox{
+    height: 80%;
+    width: 16%;
+    background-color: white;
+    margin: 10 44px;
+}
+
+    
+</style>
+<body>
+    <div class="container">
+        <div class="top-head">
+            <div class="heading">
+                <h1>ORDER HISTORY</h1>
+            </div>
+            <div class="hiuserBox">
+                <p>Hi user!!</p>
+            </div>
+
+        </div>
+        <div class="order-history-box">
+
+        </div>
+
+    </div>
+    
+    
+</body>
+<script>
+   var userData;
+   var userName
+
+window.onload = function () {
+        
+        userName = JSON.parse(window.localStorage.getItem("username"))
+
+        document.querySelector(".hiuserBox").innerHTML = `<p id="user">Hi!! ${userName}</p><p>Welcome To Your Profile</p>`
+       
+        fetch('/user_details_and_order')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetched data:', data);
+                userData = data;
+
+                fun(userData,userName)
+                OrderCancelFunction(userData)
+              
+
+
+            })
+            .catch(error => {
+                console.error('Error fetching user details:', error);
+            });         
+};
+
+
+        function fun(userData,userName)
+        {
+            document.querySelector(".hiuserBox").innerHTML=`<p>Hiii !! ${userName}</p><p>welcome to your profile</p>`
+            value = "";
+            console.log("user Data is",userData)
+            userData.forEach(function(element,index){
+                if(element.order_status=="dead" && element.user_name===userName)
+                {
+                    value+= `<div class="order-detail-box">
+                        <div class="order-image">
+                            <img src="${element.book_url}">
+                        </div>
+                        <div class="order_id-name-date-payment-id-quantity">
+                            <div class="order-id">
+                              <p>Order Id: ${element.order_id}</p>
+                            </div>
+                            <div class="book_name">
+                                <p>Book Name: ${element.book_name}</p>
+                            </div>
+                            <div class="date">
+                                <p>Date : ${element.order_datetime}</p>
+                            </div>
+                            <div class="payment_id">
+                                <p>Payment-ID : ${element.payment_id}</p>
+                            </div>
+                            
+                            <div class="quantity">
+                                <p>Quantity : ${element.book_quantity}</p>
+                            </div>
+                            
+                        </div>
+                        <div class="cancel_order2">
+                            <button>Refund Successfull</button>
+                        </div>
+                        
+                    </div>`
+                    return;
+                }
+                if(element.user_name===userName)
+                {
+                    value+=`<div class="order-detail-box">
+                        <div class="order-image">
+                            <img src="${element.book_url}">
+                        </div>
+                        <div class="order_id-name-date-payment-id-quantity">
+                            <div class="order-id">
+                              <p>Order Id: ${element.order_id}</p>
+                            </div>
+                            <div class="book_name">
+                                <p>Book Name: ${element.book_name}</p>
+                            </div>
+                            <div class="date">
+                                <p>Date : ${element.order_datetime}</p>
+                            </div>
+                            <div class="payment_id">
+                                <p>Payment-ID : ${element.payment_id}</p>
+                            </div>
+                            
+                            <div class="quantity">
+                                <p>Quantity : ${element.book_quantity}</p>
+                            </div>
+                            
+                        </div>
+                        <div class="cancel_order">
+                            <button data-index="${index}" id="CancelOrder">Cancel Order</button>
+                        </div>
+                        
+                    </div>`
+    
+            }
+                
+         });
+         document.querySelector(".order-history-box").innerHTML = value
+         
+         
+        }
+
+
+        
+
+function displayUserOrders(){
+
+}
+
+var empty_array = []
+
+function OrderCancelFunction(userData){
+    document.querySelectorAll(".cancel_order button").forEach(function(btn){
+         btn.addEventListener("click",function(){
+           // alert("u clicked")
+            var index = parseInt(this.dataset.index)
+            empty_array.push(userData[index])
+            console.log(empty_array)
+            window.localStorage.setItem('CanceOrderDetailsFromUserInterfacePage',JSON.stringify(empty_array))
+            window.location.href="CancelOrderPage.html"
+         })
+})
+}
+
+
+
+
+</script>
+</html>
+
+

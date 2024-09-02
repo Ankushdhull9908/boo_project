@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    form{
+        display: none;
+    }
+</style>
+<body>
+    <form method="post" action="/submitComment">
+        <input type="text" name="book_name" id="book_name">
+        <textarea id="commentData" name="commentData"cols="30" rows="10"></textarea>
+        <input type="submit" id="sbt">
+
+    </form>
+    
+</body>
+<script>
+    window.onload=function(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const comment = urlParams.get('comment');
+    var commentBookData = JSON.parse(window.localStorage.getItem("commnetData"));
+    //document.write(comment)
+    document.getElementById("book_name").value = commentBookData
+    document.getElementById("commentData").value= comment
+    document.getElementById("sbt").click()
+
+    
+    //console.log(commentBookData)
+
+    }
+
+    
+    
+    
+</script>
+</html>

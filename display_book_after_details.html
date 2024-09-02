@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form method="post" action="/final_submit">
+    NAME:<input type="text" id="name">
+    PRICE:<input type="number" id="price">
+    <input type="submit" value="Confirm Purchase">
+    </form>
+    </div>
+    
+</body>
+<script>
+    window.onload=function(){
+        
+        fetchedBookDetail = JSON.parse(window.localStorage.getItem('clickedBook'))
+        console.log(fetchedBookDetail)
+        
+        var book_name = fetchedBookDetail.name;
+        var book_price = fetchedBookDetail.price;
+        
+        document.getElementById("name").value = book_name
+        document.getElementById("price").value = book_price
+
+
+        
+    }
+
+    
+
+   
+</script>
+</html>

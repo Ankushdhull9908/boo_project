@@ -1,0 +1,440 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+    background-color: rgb(237, 243, 243);
+}
+
+.cart-box {
+    height: 600px;
+    width: 1100px;
+    background-color: rgb(237, 243, 243);
+    min-width: 1200px;
+
+
+
+}
+
+.cart-box h1{
+    position: relative;
+    
+    left: 60;
+}
+
+.free_delivery_section {
+    border-radius: 5px;
+    position: relative;
+    top: 40;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.free_delivery_section2{
+    border-radius: 5px;
+    position: relative;
+    top: 60;
+    height: 100px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cart-book {
+    display: flex;
+    position: relative;
+    top: 40;
+    height: 200px;
+    width: 800px;
+    background-color: white;
+}
+
+.main-cart-items {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    overflow-y: scroll;
+    gap: 30px;
+}
+
+
+
+.contain-cart-delivery {
+    position: relative;
+    top: 20;
+    height: 500px;
+    width: 1400px;
+   
+    display: flex;
+    justify-content:left;
+    align-items: flex-start;
+   
+    left: 50;
+
+}
+
+.book-image {
+    height: 100%;
+    width: 20%;
+    background-color: bisque;
+    border: 0.1px solid #ccc;
+}
+
+.book-image img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.name-quantity {
+    position: relative;
+    top: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    width: 60%;
+
+
+}
+
+.book-name {
+    height: 20%;
+    width: 70%;
+
+}
+
+.book-name p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.book-author {
+    height: 20%;
+    width: 70%;
+
+}
+
+.book-weight {
+    height: 20%;
+    width: 70%;
+}
+
+.book-weight p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.book-seller {
+
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    width: 70%;
+}
+
+.book-quantity {
+    height: 20%;
+    width: 70%;
+
+}
+
+.removeItem {
+    position: relative;
+    top: 20;
+    height: 20%;
+    width: 70%;
+
+}
+
+.book-seller p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.book-seller img {
+    height: 20px;
+    width: 20px;
+}
+
+input {
+    height: 20px;
+    width: 80px;
+
+}
+
+.plus,
+.minus {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0.1px solid #ccc;
+    font-size: large;
+
+}
+
+.plus:hover {
+    background-color: green;
+    color: white;
+}
+
+.minus:hover {
+    background-color: red;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.price_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+
+}
+
+.deliveryoption{
+    
+    height: 40px;
+    width: auto;
+}
+
+.initial-price {
+    height: 50%;
+    width: 100%;
+}
+
+.total-price {
+    height: 50%;
+    width: 100%;
+}
+
+#initialprice {
+    height: 100px;
+    width: 100px;
+    border: none;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#totalprice {
+    height: 100px;
+    width: 100px;
+    border: none;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#buy {
+    height: 30px;
+    width: 160px;
+    border-radius: 5px;
+    border: 0.1px solid #ccc;
+}
+
+#buy:hover {
+
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    background-color: green;
+}
+
+#blank {
+    width: 120px;
+    height: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgreen;
+}
+
+#down-arrow:hover{
+    transform: rotate(180deg);
+}
+
+.verified {
+    height: 20px;
+    width: 20px;
+
+}
+
+.verified img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+
+
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.insideNav {
+    position: relative;
+    top: 5;
+    height: 100%;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#search {
+    height: 30px;
+    width: 650px;
+    border: 0.1px solid #ccc;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+.account {
+
+    height: 30px;
+    width: 170px;
+    border: 0.1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cart {
+    height: 30px;
+    width: 30px;
+    background-color: azure;
+}
+
+.cart img {
+    height: 100%;
+    width: 100%;
+}
+
+.account img {
+    height: 25px;
+    width: 25px;
+
+}
+
+#down-arrow {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.6s ease;
+
+}
+
+.account:hover {
+    cursor: pointer;
+}
+
+#emptyCartImg {
+    height: 200px;
+    width: 200px;
+}
+
+.emptycart {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proceedToShop {
+    position: relative;
+    top: 30;
+    height: 40px;
+    width: 150px;
+    border: 0.1px solid #ccc;
+    border-radius: 5px;
+}
+
+.proceedToShop:hover {
+    color: white;
+    background-color: green;
+    font-weight: 600;
+}
+
+.main-cart-items::-webkit-scrollbar{
+    display: none;
+}
+
+.free-delivery-section-section2{
+    
+    height: 500px;
+    width: 400px;
+}
+
+.verfiedImage1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 20%;
+    
+}
+
+.verfiedImage1 img{
+    height: 65%;
+    width: 85%;
+}
+
+.para{
+    position: relative;
+    top: 20;
+    height: 70%;
+    width: 70%;
+    
+}
+
+#charge{
+    color: red;
+    font-size: small;
+}
+
+#charge2{
+    color: lawngreen;
+    font-size: small;
+
+}

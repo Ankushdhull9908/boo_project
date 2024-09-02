@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Login</title>
+</head>
+<body>
+    <h2>User Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Login failed');
+                }
+
+                const { token } = await response.json();
+                localStorage.setItem('token', token);
+                document.getElementById('message').innerText = 'Login successful. Token stored in local storage.';
+            } catch (error) {
+                console.error('Login error:', error);
+                document.getElementById('message').innerText = 'Login failed. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>

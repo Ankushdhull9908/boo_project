@@ -1,0 +1,7 @@
+insert into books values(2,"karma","sadhguru",100.00,29,"Book_images/best_seller/sadhguru.jpg","life","bestseller"),
+(11,"Atomic Habbits","James Clear",551,20,"Book_images/best_seller/atomic habits.jpg","anime","bestseller"),
+(12,"Doglapan","Ashneer Grover",459,29,"Book_images/best_seller/doglapan.jpg","life","bestseller"),
+(13,"Ikigai","Francesc Miralles ",396,20,"Book_images/best_seller/ikigai.jpg","life","bestseller"),
+(14,"General Knowledge 2022","RPH editorial Board ",20,20,"Book_images/best_seller/gk2022.jpg","general_knowledge","bestseller"),
+(15,"Psychology of Money","Morgan Housel",303,20,"Book_images/best_seller/pschology of money.jpg","business","bestseller"),
+(16,"It Ends with Us","Collen Hoover",351,20,"Book_images/best_seller/it ends with us.jpg","love","bestseller")

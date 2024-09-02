@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+    height: 100%;
+    width: 100%;
+  
+}
+    .search_container {
+    
+    height: 85%;
+    width: 85%;
+ 
+    margin: auto;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    
+}
+
+.searchbook{
+    display: inline-block;
+    flex-direction: row;
+    height: 60%;
+    width: 15%;
+    min-width:200px;
+    
+  
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin: 0 12px;
+
+    
+}
+
+
+.search_container::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.searchboxdetails{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+    
+}
+.searchimage{
+    position: relative;
+    height: 60%;
+    width: 80%;
+    display: flex
+    
+    
+}
+.searchname{
+
+    height: 10%;
+    width: 80%;
+    
+    
+}
+
+.searchimage img{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+}
+
+.searchname p{
+    font-size: large;
+}
+.searchauthor{
+    height: 10%;
+    width: 80%;
+    
+    font-style: italic;
+}
+
+.searchauthor p{
+    font-style: italic;
+}
+
+.searchprice p{
+    color: red;
+}
+
+.searchbook:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.showresult{
+    position: relative;
+    height: 10%;
+    width: 50%;
+    top: 10;
+    margin: auto;
+}
+
+
+
+.result{
+    height: 10%;
+    width: 100%;
+ 
+}
+
+
+
+
+</style>
+
+<body>
+    <div class="main">
+        <div class="result">
+            <button>home</button>
+            <p class="showresult">
+                
+            </p>
+
+        </div>
+        
+        
+
+        
+        <div class="search_container">
+            
+       
+        </div>
+
+    </div>
+<script>
+    var price;
+    window.onload = function()
+    {
+       // var container = document.querySelector(".search_container")
+        var value1 = "";
+        var numberofitem = 0;
+        var cartItems = JSON.parse(window.localStorage.getItem('cartitems'))
+        
+        console.log(cartItems)
+        cartItems.forEach(function(elem,index) {
+            value1 += `
+                <div class="searchbook">
+                    <div class="searchimage">
+                        <img src="${elem.url}">
+                        
+                    </div>
+                    <div class="searchboxdetails">
+                        <div class="searchname">
+                            <p>${elem.name}</p>
+                        </div>
+                        <div class="searchauthor">
+                            <p>By: ${elem.author}</p>
+                        </div>
+                        <div class="searchprice">
+                            <p>Price: ₹</p>
+                            <input type="number" value="${elem.price}" id="price" disabled>
+                        </div>
+                        <div class="searchaddToCart">
+                            <button data-book="${index}" class="cartBtn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>`;
+                numberofitem++;
+              //  alert(elem.price)
+              price = elem.price
+               
+        });
+
+        if(numberofitem==0)
+        {
+            document.querySelector(".showresult").innerHTML = `<p>your cart is empty</p>`;
+        }
+        var container = document.querySelector(".search_container");
+        document.querySelector(".showresult").innerHTML = `<p>Resuts: No. of Books in cart: ${numberofitem}</p>`;
+        container.innerHTML = value1;
+    }
+
+    
+</script>
+</html>

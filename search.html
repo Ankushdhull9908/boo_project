@@ -1,0 +1,557 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+    .main{
+    height: 100%;
+    width: 100%;
+  
+}
+    .search_container {
+    
+    height: auto;
+    width: 94%;
+    background-color: #edf1f3;
+    margin: auto;
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  
+    
+    
+    
+}
+
+.searchbook{
+    display: inline-block;
+    flex-direction: row;
+    height: 350px;
+    width: 18%;
+    min-width:175px;
+    background-color: aliceblue;
+  
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin: 15 12px;
+
+    
+}
+
+
+.search_container::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.searchboxdetails{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    height: 26%;
+    width: 65%;
+     gap: 5px;
+     margin: auto;
+    
+    
+}
+.searchimage{
+    position: relative;
+    height: 55%;
+    width: 70%;
+    margin: auto;
+    
+    
+}
+.searchname{
+
+    height: 15%;
+    width: 80%;
+    overflow: hidden;
+    
+}
+
+.searchimage img{
+    height: 100%;
+    width: 100%;
+    
+}
+
+.searchname p{
+    font-size: 15px;
+}
+.searchauthor{
+    height: 10%;
+    width: 80%;
+    
+    font-style: italic;
+}
+
+.searchauthor p{
+    font-style: italic;
+}
+
+.searchprice p{
+    color: red;
+}
+
+.searchbook:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.showresult{
+    position: relative;
+    height: 10%;
+    width: 50%;
+    top: 10;
+    margin: auto;
+}
+
+
+
+.result{
+    height: 10%;
+    width: 100%;
+
+}
+
+
+/**************************/
+
+
+.nav{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+    
+        
+    }
+
+    .logo{
+        height: 40px;
+        width: 40px;
+    }
+
+    .logo img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .insideNav{
+        position: relative;
+        top: 5;
+        height: 100%;
+        width: 80%;
+      
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #search{
+        height: 30px;
+        width:650px;
+        border: 0.1px solid #ccc;
+        border-radius: 4px;
+        background-color: whitesmoke;
+    }
+
+    .account{
+      
+        height: 30px;
+        width: 170px;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .cart{
+        height: 30px;
+        width: 30px;
+        background-color: azure;
+    }
+
+    .cart img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .account img{
+        height: 25px;
+        width: 25px;
+
+    }
+
+    #down-arrow{
+        height: 20px;
+        width: 20px;
+        transition: transform 0.6s ease;
+    
+    }
+
+    .account:hover{
+          cursor: pointer;
+    }
+
+    .searchaddToCart{
+        height: 50%;
+        width: 100%;
+        
+    }
+
+    .searchaddToCart button{
+        background-color: white;
+        border-radius: 5px;
+        border: 0.1px solid #ccc;
+        height: 90%;
+        width: 100%;
+
+    }
+
+    .searchaddToCart button:hover{
+        
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        font-weight: 500;
+    }
+
+    .searchBuyNow{
+        height: 50%;
+        width: 100%;
+       
+
+    }
+
+    .searchBuyNow button{
+        background-color: white;
+        border-radius: 5px;
+        border: 0.1px solid #ccc;
+        height: 90%;
+        width: 100%;
+
+    }
+
+    .searchBuyNow button:hover{
+        cursor: pointer;
+        background-color: lightskyblue;
+        color: white;
+        font-weight: 500;
+    }
+
+    .btnCollection{
+        height: 18%;
+        width: 75%;
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #searchLogo:hover{
+        cursor: pointer;
+    }
+
+    .footer{
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 85%;
+    margin: auto;
+ 
+}
+
+.company{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 25%;
+ 
+}
+
+.policies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 25%;
+  
+}
+
+.help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 25%;
+ 
+}
+
+.misc
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 25%;
+  
+    bottom: 15;
+    
+
+}
+
+h4{
+    color: red;
+}
+
+.social{
+    height: 10%;
+    width: 100%;
+}
+
+.social_collection{
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 12px;
+    height: 100%;
+    width: 22%;
+  
+    margin: auto;
+}
+
+.social_collection img{
+    position: relative;
+    height: 35px;
+    width: 35px;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+  
+
+}
+
+.copyright p{
+    color: grey;
+}
+
+
+
+
+</style>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="insideNav">
+                <div class="logo">
+                    <img src="images/book_logo.png">
+                </div>
+                <div class="search">
+                    <input type="text" id="search">
+                </div>
+                <div class="account">
+                    <img src="images/admin-icon.png">
+                    <p id="acc">ACCOUNT</p>
+                    <img src="images/down-arrow.png" id="down-arrow">
+                </div>
+                <div class="cart">
+                    <img src="images/shopping-cart.png" id="searchLogo">
+                </div>
+                
+            </div>
+            
+            
+    
+        </div>
+        <div class="result">
+            <p class="showresult">
+                result
+            </p>
+
+        </div>
+        
+        
+
+        
+        <div class="search_container">
+            
+            
+
+        </div>
+        <div class="footer">
+            
+            <div class="social">
+                <div class="social_collection">
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+                    <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+                    <a href="https://in.pinterest.com/"><img src="images/pinterest.png"></a>
+                    <a href="https://in.linkedin.com/"><img src="images/linkedin.png"></a>
+                    <a href="https://www.youtube.com/"><img src="images/youtube.png"></a>
+                    <a href="https://twitter.com/?lang=en"><img src="images/twitter.png"></a>
+                    
+                </div>
+                
+            </div>
+            <div class="copyright">
+                <p>Copyright © Ankush Dhull BCA 3rd YEAR 2024</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    <script>
+        
+        var count = 0;
+        var numberofitem = 0;
+       // var searchInputValue = document.getElementById("search").value;
+       // addEventListener("click",fun())
+        window.onload = function(){
+        var searchInput = JSON.parse(window.localStorage.getItem('searchinputdata'));
+        var searchData = JSON.parse(window.localStorage.getItem('searchdata'));
+        console.log(searchData)
+        
+        
+        
+    
+    
+        var value1 = "";
+        var searchTerm = searchInput.toLowerCase();
+
+    
+        searchData.forEach(function (elem, index) {
+            if(searchTerm==""){
+                emptyInput = `<p>An error occurred!!! Type something to search for<p>`;
+                return;
+            }
+            
+            if (elem.book_name.toLowerCase().includes(searchTerm) || 
+                elem.book_author.toLowerCase().includes(searchTerm) ||
+                elem.book_price.toString().includes(searchTerm) ||
+                elem.book_type.toString().includes(searchTerm)) {
+                numberofitem++;
+                value1 += `
+                <div class="searchbook">
+                <div class="searchimage">
+                    <img src="${elem.book_url}">
+                </div>
+                <div class="searchboxdetails">
+                    <div class="searchname">
+                        <p>${elem.book_name}</p>
+                    </div>
+                    <div class="searchauthor">
+                        <p>By: ${elem.book_author}</p>
+                    </div>
+                    <div class="searchprice">
+                        <p>Price: ₹ ${elem.book_price}</p>
+                    </div>
+                </div>
+                    <div class="btnCollection">
+                        <div class="searchaddToCart">
+                            <button data-book="${index}" class="cartBtn">Add to cart</button>
+                        </div>
+                        <div class="searchBuyNow">
+                            <button data-book="${index}" class="BuyBtn">Buy Now</button>
+                        </div>
+
+                    </div>
+                     
+                </div>`;
+                count++;
+            }
+        });
+    
+        var container = document.querySelector(".search_container");
+        if (count !== 0) {
+            document.querySelector(".showresult").innerHTML = `<p> No. of Books Found: ${numberofitem}</p>`;
+            container.innerHTML = value1;
+        } else {
+            container.innerHTML = `<p>No results for: ${searchTerm}</p>`;
+        }
+
+        var cart=[]
+
+        function AddToCart(searchData)
+        {
+        var btns = document.querySelectorAll(".searchaddToCart button")
+        
+        btns.forEach(function(btn){
+            btn.addEventListener("click",function(){
+                var index = parseInt(this.dataset.book);
+                
+                console.log(searchData[index])
+
+                cart.push(searchData[index])
+                alert("Item Added To Cart")
+
+                window.localStorage.setItem('searchAddToCart',JSON.stringify(cart))
+                console.log("VALUES IN",cart)
+
+                
+            })
+        })
+        }
+        AddToCart(searchData)
+
+        
+    }
+
+    document.querySelector("#searchLogo").addEventListener("click",function(){
+        window.location.href="searchAddToCart.html"
+    })
+
+    
+
+    
+
+    
+    </script>
+    
+</body>
+
+</html>

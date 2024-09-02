@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-footer {
+            text-align: center;
+        }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .form-footer a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Order Product</h2>
+        <form name="product_order" method="post" action="/payment2">
+            <div class="form-group">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" placeholder="Product name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="product_price">Product Price:</label>
+                <input type="text" id="product_price" name="product_price" placeholder="Product price" readonly>
+                <div id="deliverycharges">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter pincode" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter state" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter city" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Delivery Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter delivery location" required>
+            </div>
+            <input type="submit" value="Proceed To Payment" id="submit">
+        </form>
+        <div id="totalPriceDisplay"></div>
+       
+    </div>
+
+</body>
+<script>
+
+
+var user;
+
+   
+
+    function InstantBuyFunction() {
+            var instantBuyData = JSON.parse(localStorage.getItem('instantBuy'));
+            console.log(instantBuyData)
+            if (instantBuyData) {
+                document.getElementById("product_name").value = instantBuyData[0].name;
+                if(instantBuyData[0].price<500)
+                {
+                document.getElementById("product_price").value = parseInt(instantBuyData[0].price)+50;
+                document.querySelector("#deliverycharges").innerHTML = `<p id="charge">* 50 delivery Charges applied</p>`;
+                document.querySelector("#charge").style.color = "red";
+                }
+                else
+                {
+                    document.getElementById("product_price").value = instantBuyData[0].price;
+                    document.querySelector("#deliverycharges").innerHTML = `<p id="charge">* Free Delivery</p>`;
+                    document.querySelector("#charge").style.color = "green";
+                }
+           
+            }
+         
+        }
+
+    function user_details() {
+        fetch('/user_details')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    user = data;
+                } else {
+                    console.error('No user data found.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching user details:', error);
+            });
+    }
+
+    function display_user_details() {
+        var x = document.getElementById("email").value;
+        for (var i = 0; i < user.length; i++) {
+            if (user[i] && x == user[i].user_email) {
+                document.getElementById("name").value = user[i].user_name;
+                document.getElementById("phone").value = user[i].user_phone;
+                document.getElementById("pincode").value = user[i].user_pincode;
+                document.getElementById("state").value = user[i].user_state;
+                document.getElementById("city").value = user[i].user_city;
+                document.getElementById("location").value = user[i].user_location;
+
+                break; 
+            }
+        }
+    }
+
+    window.onload = function() {
+    InstantBuyFunction()
+    user_details();
+
+    // Listen for input event on name input field
+    document.getElementById("email").addEventListener("input", function() {
+    display_user_details();
+    });
+};
+
+
+
+document.querySelector("#submit").addEventListener("click",function(){
+    var BookName = document.getElementById("product_name").value;
+    var BookPrice = document.getElementById("product_price").value;
+    var CustomerEmail = document.getElementById("email").value;
+    var CustomerName = document.getElementById("name").value;
+    var CustomerPhone = document.getElementById("phone").value;
+    var CustomerCity = document.getElementById("city").value;
+    var CustomerState = document.getElementById("state").value;
+    var CustomerPincode = document.getElementById("pincode").value;
+    
+    var CustomerAddress = document.getElementById("location").value;
+    var orderDetails = [{book_name:BookName,book_price:BookPrice,cemail:CustomerEmail,cphone:CustomerPhone,cname:CustomerName,
+        caddress:CustomerAddress,ccity:CustomerCity,cstate:CustomerState,cpincode:CustomerPincode}]
+    
+    
+    window.localStorage.setItem('instant_order_details',JSON.stringify(orderDetails))
+})
+
+
+</script>
+</html>

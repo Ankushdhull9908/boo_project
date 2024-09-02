@@ -1,0 +1,25 @@
+create database final_year_book_project2;
+create table admin_login(id varchar(20),PASSWORD varchar(20));
+insert into admin_login values("ankush@email.com","jaat");
+create table books (book_id int(2) PRIMARY KEY,book_name varchar(20),book_author varchar(20),book_price int(2),book_stock int(2),
+book_url varchar(300),book_type varchar(20),book_section varchar(20));
+insert into books values(4,"Vagabond vol 1","Takehiko Inoue",1200,40,"BOOK_images/trend books/vagabond1.jpg","anime","trendBooks"),
+(5,"Vagabond vol 2","Takehiko Inoue",1300,40,"BOOK_images/trend books//vagabond2.jpg","anime","trendBooks"),
+(6,"Vagabond vol 4","Takehiko Inoue",2400,20,"BOOK_images/trend books/vagabond4.jpg","anime","trendBooks"),
+(7,"Chainsaw Man vol 1","Tatsuki Fujimoto",600,40,"BOOK_images/trend books/chainsaw.jpg","anime","trendBooks"),
+(8,"Heaven Officials","Mo Xiang Tong Xiu",1700,40,"BOOK_images/trend books/heaven.jpg","anime","trendBooks"),
+(9,"Jujutsu Kaisen Vol1","Gege Akutami",563,40,"BOOK_images/trend books/jujutsu.jpg","anime","trendBooks"),
+(10,"20th Century Boys","Naoki Urasawa",1228,40,"BOOK_images/trend books/20century.jpg","anime","trendBooks"),
+(2,"karma","sadhguru",100.00,29,"Book_images/best_seller/sadhguru.jpg","life","bestseller"),
+(11,"Atomic Habbits","James Clear",551,20,"Book_images/best_seller/atomic habits.jpg","anime","bestseller"),
+(12,"Doglapan","Ashneer Grover",459,29,"Book_images/best_seller/doglapan.jpg","life","bestseller"),
+(13,"Ikigai","Francesc Miralles ",396,20,"Book_images/best_seller/ikigai.jpg","life","bestseller"),
+(14,"General Knowledge 2022","RPH editorial Board ",20,20,"Book_images/best_seller/gk2022.jpg","general_knowledge","bestseller"),
+(15,"Psychology of Money","Morgan Housel",303,20,"Book_images/best_seller/pschology of money.jpg","business","bestseller"),
+(16,"It Ends with Us","Collen Hoover",351,20,"Book_images/best_seller/it ends with us.jpg","love","bestseller"),
+(3,"All He Left Me Was","Shehnaz Treasury",30,29,"BOOK_images/new arrivals/all he left.jpg","love","newarrivals"),
+(17,"Finding the Oasis","Sandeep Mall",339,20,"BOOK_images/new arrivals/oasis.jpg","life","newarrivals"),
+(18,"Art Of Habits","Gauranga Das",205,29,"BOOK_images/new arrivals/art of habits.jpg","life","newarrivals"),
+(19,"Curse Of the Pir","Anupama Pandey ",303,20,"BOOK_images/new arrivals/curse of pir.jpg","life","newarrivals"),
+(20,"The Golden Touch","T.S. Kalyanarman",489,40,"BOOK_images/new arrivals/golden touch.jpg","business","newarrivals"),
+(21,"The Scrapper's Way","Damodar Padhi",324,40,"BOOK_images/new arrivals/scrapper.jpg","biography","newarrivals")

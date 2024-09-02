@@ -1,0 +1,444 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<style>
+
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(221, 240, 240);
+    }
+
+    .order-placed-section{
+        height: 20%;
+        width: 100%;
+        
+    }
+
+    .order-placed-box{
+        position: relative;
+        top: -140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 60%;
+        width: 15%;
+        margin: auto;
+        background-color: white;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+        transition: top ease-out 1s;
+    }
+
+    .order-image{
+        height: 80%;
+        width: 30%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .order-image img{
+        height: 60px;
+        width: 60px;
+    }
+
+    .para{
+        height: 80%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .order-summary-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        height: 70%;
+        width: 60%;   
+    }
+
+
+    .order-summary-section h1{
+        position: absolute;
+    }
+    .payment-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        height: 70%;
+        width: 40%;    
+    }
+
+    .payment-section h1{
+        position: absolute;
+        background-color: aliceblue;
+    }
+     
+    .order-summary-box{
+        position: relative;
+        
+        bottom: 50;
+        
+        height: 50%;
+        width: 80%;
+        background-color: white;
+        
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+
+        
+    }
+
+   
+
+    .payment-box{
+        position: relative;
+        height: 90%;
+        width: 80%;
+        background-color: white;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+        bottom: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Added a simple button style */
+    #rzp-button {
+        position: relative;
+        top: 20;
+        height: 10%;
+        width: 80%;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cart{
+        position: relative;
+        display: flex;
+        
+        justify-content: space-between;
+        align-items: center;
+        
+       
+        height: 90%;
+        width: 90%;
+        margin: auto;
+        top: 20;
+        
+    }
+
+    .image{
+       height: 95%;
+       width: 30%;
+      
+       
+    }
+
+    .image img{
+        height: 95%;
+        width: 95%;
+    }
+
+    .book_name,.book_price,.book_author,.book_quantity{
+       
+        height: 40px;
+        width: auto;
+      
+    }
+
+    #payment-section-heading{
+        position: absolute;
+        
+        top: 150;
+        left: 650;
+    }
+
+
+    .details{
+        height: 30%;
+        width: 50%;
+    
+    }
+
+    .delivery-section{
+        height: 10%;
+        width: 80%;
+        background-color: white;
+    }
+
+    .delivery-section p{
+        height: 100%;
+        width: 80%;
+        position: relative;
+        justify-content: left;
+        display: flex;
+        align-items: center;
+        left: 20;
+        
+    }
+
+    .changeaddress{
+        position: absolute;
+        
+        height: 40px;
+        width: 160px;
+        bottom: 182;
+        left: 660;
+    }
+    .changeaddress button{
+        height: 100%;
+        width: 100%;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+        background-color: orange;
+        font-weight: 500;
+        color: white;
+        font-size: medium;
+    }
+
+    .changeaddress button:hover{
+        cursor: pointer;
+        background-color: darkorange;
+    }
+
+    .razorImage{
+        position: relative;
+        top: 12;
+        height: 40%;
+        width: 95%;
+        background-color: antiquewhite;
+
+    }
+
+
+    .razorImage img{
+        height:100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .safeAndSecure{
+         height: 25%;
+         width: 95%;
+         background-color: aqua;
+
+    }
+
+    .safeAndSecure img{
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+ 
+    <div class="container">
+
+        <div class="order-placed-section">
+            <div class="order-placed-box">
+                <div class="order-image">
+                    <img src="images/shopping-bag.png">
+                </div>
+                <div class="para">
+                    <p>order placed</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="order-summary-section">
+            
+            <div class="order-summary-box">
+                
+                
+    
+            </div>
+            <div class="delivery-section">
+                
+            </div>
+            <div class="changeaddress">
+                <button id="changeTheadress">Change Delivery Address</button>
+            </div>
+
+        </div>
+        
+        <div class="payment-section">
+            
+            <div class="payment-box">
+                <div class="razorImage">
+                <img src="images/razorPay1.png">
+                </div>
+                <div class="safeAndSecure">
+                    <img src="images/razorPay3.png">
+
+                </div>
+                
+                
+                <button id="rzp-button">Pay Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+       var amount;
+       var Cname;
+       var Cemail;
+       var Cphone;
+        
+        window.onload = function(){
+            
+            
+            var cartItems2 = JSON.parse(window.localStorage.getItem('searchbuyFromCart'))
+            var cartItems = JSON.parse(window.localStorage.getItem('searchAddToCart'))
+            var quantity = cartItems2.book_quantity
+
+            console.log(cartItems)
+    
+            var orderDetails = JSON.parse(window.localStorage.getItem('search_order_details'))
+            console.log(orderDetails)
+
+            amount = orderDetails[0].book_price
+            var Cname = orderDetails[0].cname;
+            var Cemail = orderDetails[0].cemail;
+            var Cphone = orderDetails[0].cphone;
+            var Caddress = orderDetails[0].caddress;
+            var Ccity = orderDetails[0].ccity;
+            var Cstate = orderDetails[0].cstate;
+            var Cpincode = orderDetails[0].cpincode;
+
+
+            var value = "";
+        
+            cartItems.forEach(element => {
+                value+=`<div class="cart">
+                    <div class="image">
+                        <img src="${element.book_url}">
+                    </div>
+                    <div class="details">
+                    <div class="book_name">
+                        <p>Name: ${element.book_name}</p>
+                    </div>
+                    <div class="book_author">
+                        <p>Author: ${element.book_author}</p>
+                    </div>
+                    <div class="book_price">
+                        <p>Price: ₹${amount}</p>
+                    </div>
+                    <div class="book_quantity">
+                        <p>Quantity: ${quantity}</p>
+                    </div>
+                    </div>
+                    
+                </div>`
+                   
+                    
+            });
+            
+        
+            document.querySelector(".order-summary-box").innerHTML = value
+            document.querySelector(".delivery-section").innerHTML = `<p>Delivery Addr: ${Caddress},${Ccity},${Cstate},${Cpincode}</p>`
+            //confirm();
+        }
+
+        function orderAnimation1(){
+            document.querySelector(".order-placed-box").style.top = "40px"
+        }
+        
+        function orderAnimation(){
+            document.querySelector(".order-placed-box").style.top = "-130px"
+        }
+
+        // Razorpay integration
+        document.getElementById('rzp-button').onclick = function(e) {
+            
+            var razorpayOptions = {
+                "key": "rzp_test_HNeoZvspQquAqi",
+                "amount": amount*100, // Amount in paise (e.g., 1000 paise = ₹10)
+                "currency": "INR",
+                "name": "Books HUB",
+                "description": "Payment for Books HUB",
+                "image": "https://example.com/your_logo.png",
+                "handler": function(response) {
+                    if(response && response.razorpay_payment_id)
+                    {
+                        
+                        orderAnimation1()
+                        setTimeout(orderAnimation,2000)
+                        //alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
+                         setTimeout(gotonextPage,4000)
+                    }
+                    else{
+                        alert("failed")
+                    }
+  
+                },
+                "prefill": {
+                    "name": Cname,
+                    "email": Cemail,
+                    "contact": Cphone,
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+
+            var rzp = new Razorpay(razorpayOptions);
+            rzp.open();
+            e.preventDefault();
+
+           // setTimeout(gotonextPage,12000)
+            
+        }
+
+
+        function gotonextPage(){
+            window.location.href="paymentSuccessful.html"
+        }
+
+
+        document.getElementById("changeTheadress").addEventListener("click",function(){
+            window.history.back();
+        })
+
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+window.onload=function(){
+    var searchorderData = JSON.parse(window.localStorage.getItem('search_order_details'))
+    console.log(searchorderData)
+}
+
+searchbuyFromCart

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // Function to fetch data asynchronously
+function fetchData() {
+  console.log('fetchData started at', new Date().toISOString());
+
+  return fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Data fetched:', data);
+      console.log('fetchData finished at', new Date().toISOString());
+      return data;
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      throw error; // Re-throw the error to be caught by the caller
+    });
+}
+
+// Another function performing some other task
+function doSomethingElse() {
+  console.log('doSomethingElse started at', new Date().toISOString());
+  console.log('Doing something else...');
+  console.log('doSomethingElse finished at', new Date().toISOString());
+}
+
+// Call fetchData and doSomethingElse concurrently
+fetchData(); // Initiates the fetch operation
+doSomethingElse(); // This will execute immediately after fetchData is called
+
+    </script>
+</html>

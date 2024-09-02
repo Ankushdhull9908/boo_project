@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post" action="/changestatus">
+        <input type="text" name="order_id" id="order_id">
+        <input type="submit" value="submit" id="sbt">
+    </form>
+    
+</body>
+<script>
+    window.onload = function(){
+        var orderId= JSON.parse(window.localStorage.getItem('canceorderid'))
+        console.log(orderId)
+        document.getElementById("order_id").value = orderId
+        document.getElementById("sbt").click()
+    }
+</script>
+</html>

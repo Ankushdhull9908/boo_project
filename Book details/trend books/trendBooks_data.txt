@@ -1,0 +1,7 @@
+insert into books values(4,"Vagabond vol 1","Takehiko Inoue",1200,40,"BOOK_images/trend books/vagabond1.jpg","anime","trendBooks"),
+(5,"Vagabond vol 2","Takehiko Inoue",1300,40,"BOOK_images/trend books//vagabond2.jpg","anime","trendBooks"),
+(6,"Vagabond vol 4","Takehiko Inoue",2400,20,"BOOK_images/trend books/vagabond4.jpg","anime","trendBooks"),
+(7,"Chainsaw Man vol 1","Tatsuki Fujimoto",600,40,"BOOK_images/trend books/chainsaw.jpg","anime","trendBooks"),
+(8,"Heaven Officials","Mo Xiang Tong Xiu",1700,40,"BOOK_images/trend books/heaven.jpg","anime","trendBooks"),
+(9,"Jujutsu Kaisen Vol1","Gege Akutami",563,40,BOOK_images/trend books/jujutsu.jpg","anime","trendBooks"),
+(10,"20th Century Boys","Naoki Urasawa",1228,40,"BOOK_images/trend books/20century.jpg","anime","trendBooks")

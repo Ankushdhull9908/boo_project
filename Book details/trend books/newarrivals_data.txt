@@ -1,0 +1,6 @@
+insert into books values(3,"All He Left Me Was","Shehnaz Treasury",30,29,"BOOK_images/new arrivals/all he left.jpg","love","newarrivals"),
+(17,"Finding the Oasis","Sandeep Mall",339,20,"BOOK_images/new arrivals/oasis.jpg","life","newarrivals"),
+(18,"Art Of Habits","Gauranga Das",205,29,"BOOK_images/new arrivals/art of habits.jpg","life","newarrivals"),
+(19,"Curse Of the Pir","Anupama Pandey ",303,20,"BOOK_images/new arrivals/curse of pir.jpg","life","newarrivals"),
+(20,"The Golden Touch","T.S. Kalyanarman",489,40,"BOOK_images/new arrivals/golden touch.jpg","business",newarrivals"),
+(21,"The Scrapper's Way","Damodar Padhi",324,40,"BOOK_images/new arrivals/scrapper.jpg","biography","newarrivals")
