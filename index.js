@@ -11,7 +11,7 @@ var internationalBest;
 var ReviewData;
 
  var data = [
-    {book_name:"Vagabond vol 1", book_author:"Takehiko Inoue", book_price:1200, book_url:"Book_images/trend_books/_vagabond1.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Vagabond vol 1", book_author:"Takehiko Inoue", book_price:1200, book_url:"Book_images/trend_books/vagabond1.jpg", book_type:"anime", book_section:"trendBooks"},
     {book_name:"Vagabond vol 2", book_author:"Takehiko Inoue", book_price:1300, book_url:"Book_images/trend_books/vagabond2.jpg", book_type:"anime", book_section:"trendBooks"},
     {book_name:"Vagabond vol 4", book_author:"Takehiko Inoue", book_price:2400, book_url:"Book_images/trend_books/vagabond4.jpg", book_type:"anime", book_section:"trendBooks"},
     {book_name:"Chainsaw Man vol 1", book_author:"Tatsuki Fujimoto", book_price:600, book_url:"Book_images/trend_books/chainsaw.jpg", book_type:"anime", book_section:"trendBooks"},
