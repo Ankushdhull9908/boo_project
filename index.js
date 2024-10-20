@@ -16,7 +16,7 @@ var ReviewData;
         {book_name:"Vagabond vol 4", book_author:"Takehiko Inoue", book_price:2400, book_url:"BOOK_images/trend_books/vagabond4.jpg", book_type:"anime", book_section:"trendBooks"},
         {book_name:"Chainsaw Man vol 1", book_author:"Tatsuki Fujimoto", book_price:600, book_url:"BOOK_images/trend_books/chainsaw.jpg", book_type:"anime", book_section:"trendBooks"},
         {book_name:"Heaven Officials", book_author:"Mo Xiang Tong Xiu", book_price:1700, book_url:"BOOK_images/trend_books/heaven.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Jujutsu Kaisen Vol1", book_author:"Gege Akutami", book_price:563, book_url:"BOOK_images/trend_books/jujutsu.jpg", book_type:"anime", book_section:"trendBooks"},
+        {book_name:"Jujutsu Kaisen Vol1", book_author:"Gege Akutami", book_price:563, book_url:"BOOK_images/trend_books/_jujutsu.jpg", book_type:"anime", book_section:"trendBooks"},
         {book_name:"20th Century Boys", book_author:"Naoki Urasawa", book_price:1228, book_url:"Book_images/best_seller/_20century.jpg", book_type:"anime", book_section:"trendBooks"},
         {book_name:"karma", book_author:"sadhguru", book_price:100, book_url:"Book_images/best_seller/sadhguru.jpg", book_type:"life", book_section:"bestseller"},
         {book_name:"Atomic Habbits", book_author:"James Clear", book_price:551, book_url:"Book_images/best_seller/atomic habits.jpg", book_type:"anime", book_section:"bestseller"},
