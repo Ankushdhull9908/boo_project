@@ -333,9 +333,23 @@ h1{
     }
 
     .main2 .nav2{
+        font-size: 12px;
         top: 20px;
     
     
+    }
+
+    .services_section{
+        height: 80px;
+    }
+
+    .services_section p{
+        font-size: 12px;
+    }
+
+    .services_section img{
+        height: 23px;
+        width: 23px;
     }
 
     .container{
@@ -345,9 +359,61 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40%;
+        height: 30%;
         width: 90%;
        
+    }
+    .trending_books_section,.BestSeller_books_section ,.newArrivals_books_section, .international_best_sellers{
+        position: relative;
+        top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: flex-start;
+       
+       margin: auto;
+       height: 250px;
+       width: 90%;
+      
+    }
+    
+    .books_section, .books_section1, .books_section2, .books_section4 {
+       
+        height: 250px;
+        width: 100%;
+        
+    }
+    
+    .trending_books_section .book,
+    .BestSeller_books_section .book,
+    .newArrivals_books_section .book,
+    .international_best_sellers .book {
+        
+        height: 180px;
+        width: 120px;
+        
+    }
+
+    .trending_books_section .book p,.BestSeller_books_section .book p,.newArrivals_books_section .book p,.international_best_sellers .book p{
+        font-size: 12px;
+    }
+    
+    
+    
+    
+    .book img{
+        object-fit: contain;
+        height: auto;
+        width: 60px;
+    }
+    
+    .book button{
+        cursor: pointer;
+        height: 20px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        background-color: lightgreen;
+        color: white;
     }
 
     .author_section{
@@ -358,18 +424,23 @@ h1{
         justify-content:space-around;
         align-items: center;
         position: relative;
-         
+         overflow: hidden;
         height: 30%;
-        width: 90%;
+        width: 70%;
         margin: auto;
     }
     
     .author_section img{
         cursor: pointer;
-        margin: 10px 20px;
-        height: 80px;
-        width: 80px;
+        
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
+    }
+
+    .social img{
+        height: 30px;
+        width: 30px;
     }
     
 }
