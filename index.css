@@ -40,7 +40,7 @@
     justify-content: space-between;
     gap:40px;
     align-items: center;
-    background-color: aliceblue;
+    
     height: 60%;
     width: 80%;
 }
@@ -340,8 +340,12 @@ h1{
     }
 
     .main2 .nav2{
+        display: flex;
+        
         font-size: 12px;
         top: 20px;
+        
+        gap: 30px;
     
     
     }
@@ -453,6 +457,12 @@ h1{
         height: 30px;
         width: 30px;
     }
+
+    .search,.cart,.cart2,.notification,.cart-box{
+        display: none;
+    }
+
+    
     
 }
 
