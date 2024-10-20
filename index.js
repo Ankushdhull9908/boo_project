@@ -17,14 +17,14 @@ var ReviewData;
     {book_name:"Chainsaw Man vol 1", book_author:"Tatsuki Fujimoto", book_price:600, book_url:"Book_images/trend_books/chainsaw.jpg", book_type:"anime", book_section:"trendBooks"},
     {book_name:"Heaven Officials", book_author:"Mo Xiang Tong Xiu", book_price:1700, book_url:"Book_images/trend_books/heaven.jpg", book_type:"anime", book_section:"trendBooks"},
     {book_name:"Jujutsu Kaisen Vol1", book_author:"Gege Akutami", book_price:563, book_url:"Book_images/trend_books/_jujutsu.jpg", book_type:"anime", book_section:"trendBooks"},
-    {book_name:"20th Century Boys", book_author:"Naoki Urasawa", book_price:1228, book_url:"Book_images/best_seller/_20century.jpg", book_type:"anime", book_section:"trendBooks"},
-    {book_name:"karma", book_author:"sadhguru", book_price:100, book_url:"Book_images/best_seller/sadhguru.jpg", book_type:"life", book_section:"bestseller"},
+   
+   {book_name:"karma", book_author:"sadhguru", book_price:100, book_url:"Book_images/best_seller/sadhguru.jpg", book_type:"life", book_section:"bestseller"},
     {book_name:"Atomic Habbits", book_author:"James Clear", book_price:551, book_url:"Book_images/best_seller/atomic habits.jpg", book_type:"anime", book_section:"bestseller"},
     {book_name:"Doglapan", book_author:"Ashneer Grover", book_price:459, book_url:"Book_images/best_seller/doglapan.jpg", book_type:"life", book_section:"bestseller"},
     {book_name:"Ikigai", book_author:"Francesc Miralles", book_price:396, book_url:"Book_images/best_seller/ikigai.jpg", book_type:"life", book_section:"bestseller"},
     {book_name:"General Knowledge 2022", book_author:"RPH editorial Board", book_price:20, book_url:"Book_images/best_seller/gk2022.jpg", book_type:"general_knowledge", book_section:"bestseller"},
     {book_name:"Psychology of Money", book_author:"Morgan Housel", book_price:303, book_url:"Book_images/best_seller/pschology of money.jpg", book_type:"business", book_section:"bestseller"},
-    {book_name:"It Ends with Us", book_author:"Collen Hoover", book_price:351, book_url:"Book_images/best_seller/it ends with us.jpg", book_type:"love", book_section:"newarrivals"},
+   
     {book_name:"All He Left Me Was", book_author:"Shehnaz Treasury", book_price:30, book_url:"Book_images/new_arrivals/all he left.jpg", book_type:"love", book_section:"newarrivals"},
     {book_name:"Finding the Oasis", book_author:"Sandeep Mall", book_price:339, book_url:"Book_images/new_arrivals/oasis.jpg", book_type:"life", book_section:"newarrivals"},
     {book_name:"Art Of Habits", book_author:"Gauranga Das", book_price:205, book_url:"Book_images/new_arrivals/art of habits.jpg", book_type:"life", book_section:"newarrivals"},
@@ -81,53 +81,24 @@ setInterval(slideShow, 3000);
 
 
     function fun(trendBooks) {
-        //xyz(ReviewData)
-   // var ankush2 = ReviewData
+        
         var clutter = "";
     
         trendBooks.forEach(function (book,index) {
-            clutter += `<div class="book">
-                <div class="image2">
+            clutter += 
+            `<div class="book">
                     <img src="${book.book_url}">
-                </div>
-                <div class="book_content">
-                    <div class="name-author-price-content">
-                        <div class="name">
+ 
                             <p>Name: ${book.book_name}</p>
-                        </div>
-                        <div class="author">
-                            <p>By: ${book.book_author}</p>
-                        </div>
-                        <div class="price">
-                            <p>Price: ₹${book.book_price}</p>
-                        </div>
-                        <div class="rating">`;
-    
-            
-           // var reviewsCount = ankush2.filter(review => review.book_name === book.book_name).length;
-
-            
-
-          // var reviewsCount = ankush2.filter(function(review) {
-         //   return review.book_name === book.book_name;
-       // }).length;
-        
-
-            
-
-            
-           // clutter += `<img src="images/4star.png">
-           // <p>(${reviewsCount})</p><img id="heart" src="images/heart.png">`;
-    
-            clutter += `</div>
-                    </div>
-                    <div class="addtoCart-buyNow-buttons">
-                        <div class="addToCart">
-                            <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
-                        </div>
+                        
                        
-                    </div>
-                </div>
+                            <p>By: ${book.book_author}</p>
+                      
+                       
+                            <p>Price: ₹${book.book_price}</p>
+                
+                            <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
+   
             </div>`;
         });
     
@@ -142,36 +113,18 @@ function fun2(newArrivals) {
     
         newArrivals.forEach(function (book,index) {
             clutter += `<div class="book">
-                <div class="image2">
                     <img src="${book.book_url}">
-                </div>
-                <div class="book_content">
-                    <div class="name-author-price-content">
-                        <div class="name">
+ 
                             <p>Name: ${book.book_name}</p>
-                        </div>
-                        <div class="author">
-                            <p>By: ${book.book_author}</p>
-                        </div>
-                        <div class="price">
-                            <p>Price: ₹${book.book_price}</p>
-                        </div>
-                        <div class="rating">`;
-    
-            // Find reviews count for the current book
-          //  var reviewsCount = ankush2.filter(review => review.book_name === book.book_name).length;
-          //  clutter += `<img src="images/4star.png">
-           // <p>(${reviewsCount})</p><img id="heart" src="images/heart.png">`;
-    
-            clutter += `</div>
-                    </div>
-                    <div class="addtoCart-buyNow-buttons">
-                        <div class="addToCart">
-                            <button data-book="${index}" data-section="newArrivals" class="cartBtn">Add to cart</button>
-                        </div>
                         
-                    </div>
-                </div>
+                       
+                            <p>By: ${book.book_author}</p>
+                      
+                       
+                            <p>Price: ₹${book.book_price}</p>
+                
+                            <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
+   
             </div>`;
         });
     
@@ -187,36 +140,18 @@ function fun4(internationalBest) {
     
         internationalBest.forEach(function (book,index) {
             clutter += `<div class="book">
-                <div class="image2">
                     <img src="${book.book_url}">
-                </div>
-                <div class="book_content">
-                    <div class="name-author-price-content">
-                        <div class="name">
+ 
                             <p>Name: ${book.book_name}</p>
-                        </div>
-                        <div class="author">
-                            <p>By: ${book.book_author}</p>
-                        </div>
-                        <div class="price">
-                            <p>Price: ₹${book.book_price}</p>
-                        </div>
-                        <div class="rating">`;
-    
-            // Find reviews count for the current book
-          //  var reviewsCount = ankush2.filter(review => review.book_name === book.book_name).length;
-           // clutter += `<img src="images/4star.png">
-           // <p>(${reviewsCount})</p><img id="heart" src="images/heart.png">`;
-    
-            clutter += `</div>
-                    </div>
-                    <div class="addtoCart-buyNow-buttons">
-                        <div class="addToCart">
-                            <button data-book="${index}" data-section="internationalBest" class="cartBtn">Add to cart</button>
-                        </div>
                         
-                    </div>
-                </div>
+                       
+                            <p>By: ${book.book_author}</p>
+                      
+                       
+                            <p>Price: ₹${book.book_price}</p>
+                
+                            <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
+   
             </div>`;
         });
     
@@ -230,36 +165,18 @@ function fun1(bestsellers) {
     
         bestsellers.forEach(function (book,index) {
             clutter += `<div class="book">
-                <div class="image2">
                     <img src="${book.book_url}">
-                </div>
-                <div class="book_content">
-                    <div class="name-author-price-content">
-                        <div class="name">
+ 
                             <p>Name: ${book.book_name}</p>
-                        </div>
-                        <div class="author">
-                            <p>By: ${book.book_author}</p>
-                        </div>
-                        <div class="price">
-                            <p>Price: ₹${book.book_price}</p>
-                        </div>
-                        <div class="rating">`;
-    
-            // Find reviews count for the current book
-         //   var reviewsCount = ankush2.filter(review => review.book_name === book.book_name).length;
-          //  clutter += `<img src="images/4star.png">
-          //  <p>(${reviewsCount})</p><img id="heart" src="images/heart.png">`;
-    
-            clutter += `</div>
-                    </div>
-                    <div class="addtoCart-buyNow-buttons">
-                        <div class="addToCart">
-                            <button data-book="${index}" data-section="bestsellers" class="cartBtn">Add to cart</button>
-                        </div>
                         
-                    </div>
-                </div>
+                       
+                            <p>By: ${book.book_author}</p>
+                      
+                       
+                            <p>Price: ₹${book.book_price}</p>
+                
+                            <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
+   
             </div>`;
         });
     
