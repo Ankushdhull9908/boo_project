@@ -11,33 +11,34 @@ var internationalBest;
 var ReviewData;
 
  var data = [
-        {book_name:"Vagabond vol 1", book_author:"Takehiko Inoue", book_price:1200, book_url:"BOOK_images/trend_books/_vagabond1.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Vagabond vol 2", book_author:"Takehiko Inoue", book_price:1300, book_url:"BOOK_images/trend_books/vagabond2.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Vagabond vol 4", book_author:"Takehiko Inoue", book_price:2400, book_url:"BOOK_images/trend_books/vagabond4.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Chainsaw Man vol 1", book_author:"Tatsuki Fujimoto", book_price:600, book_url:"BOOK_images/trend_books/chainsaw.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Heaven Officials", book_author:"Mo Xiang Tong Xiu", book_price:1700, book_url:"BOOK_images/trend_books/heaven.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"Jujutsu Kaisen Vol1", book_author:"Gege Akutami", book_price:563, book_url:"BOOK_images/trend_books/_jujutsu.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"20th Century Boys", book_author:"Naoki Urasawa", book_price:1228, book_url:"Book_images/best_seller/_20century.jpg", book_type:"anime", book_section:"trendBooks"},
-        {book_name:"karma", book_author:"sadhguru", book_price:100, book_url:"Book_images/best_seller/sadhguru.jpg", book_type:"life", book_section:"bestseller"},
-        {book_name:"Atomic Habbits", book_author:"James Clear", book_price:551, book_url:"Book_images/best_seller/atomic habits.jpg", book_type:"anime", book_section:"bestseller"},
-        {book_name:"Doglapan", book_author:"Ashneer Grover", book_price:459, book_url:"Book_images/best_seller/doglapan.jpg", book_type:"life", book_section:"bestseller"},
-        {book_name:"Ikigai", book_author:"Francesc Miralles", book_price:396, book_url:"Book_images/best_seller/ikigai.jpg", book_type:"life", book_section:"bestseller"},
-        {book_name:"General Knowledge 2022", book_author:"RPH editorial Board", book_price:20, book_url:"Book_images/best_seller/gk2022.jpg", book_type:"general_knowledge", book_section:"bestseller"},
-        {book_name:"Psychology of Money", book_author:"Morgan Housel", book_price:303, book_url:"Book_images/best_seller/pschology of money.jpg", book_type:"business", book_section:"bestseller"},
-        {book_name:"It Ends with Us", book_author:"Collen Hoover", book_price:351, book_url:"Book_images/best_seller/it ends with us.jpg", book_type:"love", book_section:"newarrivals"},
-        {book_name:"All He Left Me Was", book_author:"Shehnaz Treasury", book_price:30, book_url:"BOOK_images/new_arrivals/all he left.jpg", book_type:"love", book_section:"newarrivals"},
-        {book_name:"Finding the Oasis", book_author:"Sandeep Mall", book_price:339, book_url:"BOOK_images/new_arrivals/oasis.jpg", book_type:"life", book_section:"newarrivals"},
-        {book_name:"Art Of Habits", book_author:"Gauranga Das", book_price:205, book_url:"BOOK_images/new_arrivals/art of habits.jpg", book_type:"life", book_section:"newarrivals"},
-        {book_name:"Curse Of the Pir", book_author:"Anupama Pandey", book_price:303, book_url:"BOOK_images/new_arrivals/curse of pir.jpg", book_type:"life", book_section:"newarrivals"},
-        {book_name:"The Golden Touch", book_author:"T.S. Kalyanarman", book_price:489, book_url:"BOOK_images/new_arrivals/golden touch.jpg", book_type:"business", book_section:"newarrivals"},
-        {book_name:"The Scrapper's Way", book_author:"Damodar Padhi", book_price:324, book_url:"BOOK_images/new_arrivals/scrapper.jpg", book_type:"biography", book_section:"newarrivals"},
-        {book_name:"Girl Murder", book_author:"Holly Jackson", book_price:200, book_url:"Book_images/international_best_seller/girl_murder.jpg", book_type:"love", book_section:"internationalBest"},
-        {book_name:"Gone Girl", book_author:"chemin Chris", book_price:500, book_url:"Book_images/international_best_seller/gone_girl.jpg", book_type:"love", book_section:"internationalBest"},
-        {book_name:"Good Girl", book_author:"piper Lawson", book_price:600, book_url:"Book_images/international_best_seller/good_girl.jpg", book_type:"love", book_section:"internationalBest"},
-        {book_name:"Kid From Space", book_author:"Ross Welford", book_price:280, book_url:"Book_images/international_best_seller/kid_from_space.jpg", book_type:"love", book_section:"internationalBest"},
-        {book_name:"The Love Hypothesis", book_author:"Ali Hazelwood", book_price:900, book_url:"Book_images/international_best_seller/love.jpg", book_type:"love", book_section:"internationalBest"},
-        {book_name:"The Shinning", book_author:"Stephen King", book_price:400, book_url:"Book_images/international_best_seller/the_shinning.jpg", book_type:"love", book_section:"internationalBest"}
-    ];
+    {book_name:"Vagabond vol 1", book_author:"Takehiko Inoue", book_price:1200, book_url:"Book_images/trend_books/_vagabond1.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Vagabond vol 2", book_author:"Takehiko Inoue", book_price:1300, book_url:"Book_images/trend_books/vagabond2.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Vagabond vol 4", book_author:"Takehiko Inoue", book_price:2400, book_url:"Book_images/trend_books/vagabond4.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Chainsaw Man vol 1", book_author:"Tatsuki Fujimoto", book_price:600, book_url:"Book_images/trend_books/chainsaw.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Heaven Officials", book_author:"Mo Xiang Tong Xiu", book_price:1700, book_url:"Book_images/trend_books/heaven.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"Jujutsu Kaisen Vol1", book_author:"Gege Akutami", book_price:563, book_url:"Book_images/trend_books/_jujutsu.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"20th Century Boys", book_author:"Naoki Urasawa", book_price:1228, book_url:"Book_images/best_seller/_20century.jpg", book_type:"anime", book_section:"trendBooks"},
+    {book_name:"karma", book_author:"sadhguru", book_price:100, book_url:"Book_images/best_seller/sadhguru.jpg", book_type:"life", book_section:"bestseller"},
+    {book_name:"Atomic Habbits", book_author:"James Clear", book_price:551, book_url:"Book_images/best_seller/atomic habits.jpg", book_type:"anime", book_section:"bestseller"},
+    {book_name:"Doglapan", book_author:"Ashneer Grover", book_price:459, book_url:"Book_images/best_seller/doglapan.jpg", book_type:"life", book_section:"bestseller"},
+    {book_name:"Ikigai", book_author:"Francesc Miralles", book_price:396, book_url:"Book_images/best_seller/ikigai.jpg", book_type:"life", book_section:"bestseller"},
+    {book_name:"General Knowledge 2022", book_author:"RPH editorial Board", book_price:20, book_url:"Book_images/best_seller/gk2022.jpg", book_type:"general_knowledge", book_section:"bestseller"},
+    {book_name:"Psychology of Money", book_author:"Morgan Housel", book_price:303, book_url:"Book_images/best_seller/pschology of money.jpg", book_type:"business", book_section:"bestseller"},
+    {book_name:"It Ends with Us", book_author:"Collen Hoover", book_price:351, book_url:"Book_images/best_seller/it ends with us.jpg", book_type:"love", book_section:"newarrivals"},
+    {book_name:"All He Left Me Was", book_author:"Shehnaz Treasury", book_price:30, book_url:"Book_images/new_arrivals/all he left.jpg", book_type:"love", book_section:"newarrivals"},
+    {book_name:"Finding the Oasis", book_author:"Sandeep Mall", book_price:339, book_url:"Book_images/new_arrivals/oasis.jpg", book_type:"life", book_section:"newarrivals"},
+    {book_name:"Art Of Habits", book_author:"Gauranga Das", book_price:205, book_url:"Book_images/new_arrivals/art of habits.jpg", book_type:"life", book_section:"newarrivals"},
+    {book_name:"Curse Of the Pir", book_author:"Anupama Pandey", book_price:303, book_url:"Book_images/new_arrivals/curse of pir.jpg", book_type:"life", book_section:"newarrivals"},
+    {book_name:"The Golden Touch", book_author:"T.S. Kalyanarman", book_price:489, book_url:"Book_images/new_arrivals/golden touch.jpg", book_type:"business", book_section:"newarrivals"},
+    {book_name:"The Scrapper's Way", book_author:"Damodar Padhi", book_price:324, book_url:"Book_images/new_arrivals/scrapper.jpg", book_type:"biography", book_section:"newarrivals"},
+    {book_name:"Girl Murder", book_author:"Holly Jackson", book_price:200, book_url:"Book_images/international_best_seller/girl_murder.jpg", book_type:"love", book_section:"internationalBest"},
+    {book_name:"Gone Girl", book_author:"chemin Chris", book_price:500, book_url:"Book_images/international_best_seller/gone_girl.jpg", book_type:"love", book_section:"internationalBest"},
+    {book_name:"Good Girl", book_author:"piper Lawson", book_price:600, book_url:"Book_images/international_best_seller/good_girl.jpg", book_type:"love", book_section:"internationalBest"},
+    {book_name:"Kid From Space", book_author:"Ross Welford", book_price:280, book_url:"Book_images/international_best_seller/kid_from_space.jpg", book_type:"love", book_section:"internationalBest"},
+    {book_name:"The Love Hypothesis", book_author:"Ali Hazelwood", book_price:900, book_url:"Book_images/international_best_seller/love.jpg", book_type:"love", book_section:"internationalBest"},
+    {book_name:"The Shinning", book_author:"Stephen King", book_price:400, book_url:"Book_images/international_best_seller/the_shinning.jpg", book_type:"love", book_section:"internationalBest"}
+];
+
     
 window.onload = function () {
     
