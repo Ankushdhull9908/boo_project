@@ -327,6 +327,13 @@ h1{
         width: 100vw;
         overflow: hidden;
     }
+
+    .fiction_and_manga_book img{
+        margin: 20px;
+        flex-shrink: 0;
+        height: 60%;
+        width: 45%;
+    }
     .main{
         height: 100%;
         width: 100%;
@@ -371,14 +378,14 @@ h1{
        justify-content: flex-start;
        
        margin: auto;
-       height: 250px;
+       height: 280px;
        width: 90%;
       
     }
     
     .books_section, .books_section1, .books_section2, .books_section4 {
        
-        height: 250px;
+        height: 280px;
         width: 100%;
         
     }
@@ -387,14 +394,18 @@ h1{
     .BestSeller_books_section .book,
     .newArrivals_books_section .book,
     .international_best_sellers .book {
-        
-        height: 180px;
-        width: 120px;
+        margin-right: 8px;
+        height: 220px;
+        width: 150px;
         
     }
 
+    h1{
+        font-size: 20px;
+    }
+
     .trending_books_section .book p,.BestSeller_books_section .book p,.newArrivals_books_section .book p,.international_best_sellers .book p{
-        font-size: 12px;
+        font-size: 14px;
     }
     
     
