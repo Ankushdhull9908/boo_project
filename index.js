@@ -124,9 +124,7 @@ setInterval(slideShow, 3000);
                         <div class="addToCart">
                             <button data-book="${index}" data-section="trendBooks" class="cartBtn">Add to cart</button>
                         </div>
-                        <div class="buyBtn">
-                            <button data-book="${index}" data-section="trendBooks" class="buyNow">Buy Now</button>
-                        </div>
+                       
                     </div>
                 </div>
             </div>`;
@@ -170,9 +168,7 @@ function fun2(newArrivals) {
                         <div class="addToCart">
                             <button data-book="${index}" data-section="newArrivals" class="cartBtn">Add to cart</button>
                         </div>
-                        <div class="buyBtn">
-                            <button data-book="${index}" data-section="newArrivals" class="buyNow">Buy Now</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>`;
@@ -217,9 +213,7 @@ function fun4(internationalBest) {
                         <div class="addToCart">
                             <button data-book="${index}" data-section="internationalBest" class="cartBtn">Add to cart</button>
                         </div>
-                        <div class="buyBtn">
-                            <button data-book="${index}" data-section="internationalBest" class="buyNow">Buy Now</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>`;
@@ -262,9 +256,7 @@ function fun1(bestsellers) {
                         <div class="addToCart">
                             <button data-book="${index}" data-section="bestsellers" class="cartBtn">Add to cart</button>
                         </div>
-                        <div class="buyBtn">
-                            <button data-book="${index}" data-section="bestsellers" class="buyNow">Buy Now</button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>`;
