@@ -334,7 +334,7 @@ h1{
     .fiction_and_manga_book img{
         margin: 20px;
         flex-shrink: 0;
-        height: 60%;
+        height: 50%;
         width: 45%;
     }
     .main{
