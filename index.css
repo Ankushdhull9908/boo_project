@@ -442,9 +442,9 @@ h1{
         justify-content:space-around;
         align-items: center;
         position: relative;
-         
+         width:480px;
         height: 30%;
-        width: 100%;
+        background-color: red;
         
     }
     
