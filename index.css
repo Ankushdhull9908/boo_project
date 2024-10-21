@@ -178,7 +178,8 @@
 .books_section::-webkit-scrollbar, 
 .books_section1::-webkit-scrollbar, 
 .books_section2::-webkit-scrollbar, 
-.books_section4::-webkit-scrollbar {
+.books_section4::-webkit-scrollbar,
+.author_section::-webkit-scrollbar{
     display: none; /* Hide scrollbar in Chrome, Safari, and Edge */
 }
 
@@ -453,9 +454,9 @@ h1{
     .author_section img{
         cursor: pointer;
         
-        height: 75px;
-        width: 75px;
-        border-radius:50%;
+        height: 90px;
+        width: 90px;
+        
     }
 
     
