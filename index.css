@@ -470,6 +470,14 @@ h1{
         display: none;
     }
 
+    .nav2{
+        overflow-x: scroll;
+        overflow-y: hidden;
+         flex-wrap:nowrap;
+
+        
+    }
+
     
     
 }
