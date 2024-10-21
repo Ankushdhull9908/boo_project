@@ -445,7 +445,7 @@ h1{
          overflow: hidden;
         height: 30%;
         width: 70%;
-        margin: auto;
+        
     }
     
     .author_section img{
@@ -453,8 +453,10 @@ h1{
         
         height: 50px;
         width: 50px;
-        border-radius: 50%;
+        
     }
+
+    
 
     .social img{
         height: 30px;
