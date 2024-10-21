@@ -69,6 +69,7 @@ window.onload = function () {
          //  clickOnHeart(data)
    // fetchReviewData()
     //bookLoad();
+    slideShow();
     ScrollNav();  
     
 };
