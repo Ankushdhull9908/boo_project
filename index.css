@@ -466,10 +466,10 @@ h1{
         width: 30px;
     }
 
-    .search,.cart2,.notification,.cart-box{
+    .search,.cart,.notification,.cart-box{
         display: none;
     }
-    .cart{
+    .cart2{
         height:30px;
         width:50px;
         position:absolute;
